@@ -14,3 +14,7 @@ Configured on 22 October 2026: repository Actions secrets `PACKAGE_CAPTURE_APP_P
 ## Own SDK development exports
 
 The captured source hook exports only leaf files/symlinks from this recipe's SDK staging record and its own provides file, plus its own recipe. Shared include/lib directories and foreign provides records are excluded. Legitimate prerequisite development exports still import through the generic checksum-verified path.
+
+## Tag-authority negative fixture
+
+Main intentionally has a different JSON and a failing OpenWrt hook. The v1.1.0 tag retains the correct five-row integration. Builds and cascades must use that captured tag, not main. Restore the tag-owned files before preparing another release.
