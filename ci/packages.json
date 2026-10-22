@@ -2,8 +2,7 @@
   "title": "demo-join",
   "package": "demo-join",
   "depends_on": [
-    "demo-app",
-    "demo-side"
+    "demo-join"
   ],
   "build": {
     "native": "ci/package/native.sh",
