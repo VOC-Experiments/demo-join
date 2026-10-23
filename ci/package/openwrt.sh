@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-printf "MAIN sentinel hook must not run for captured v1.1.0\n" >&2
-exit 77
 cp -a source/src "recipes/$BUILD_PROJECT/src"
 version=$(cat source/VERSION)
 sed -e "s/@VERSION@/$version/g" -e "s/@REVISION@/$PACKAGE_RELEASE/g" source/ci/package/Makefile > "recipes/$BUILD_PROJECT/Makefile"
